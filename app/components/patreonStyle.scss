@@ -1,0 +1,44 @@
+@import '_breackpoints';
+
+.patreonButton {
+    display: flex;
+    position: fixed;
+    top: 5rem;
+    z-index: 999;
+    background-color: #ff7100;
+    transition: all 0.5s;
+
+    border-bottom-left-radius: 15px;
+    right: 0;
+    box-shadow: rgb(165 159 159 / 80%) -8px 5px 15px;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #fff;
+    }
+    &:hover {
+        box-shadow: none;
+        background-color: rgb(255 113 0 / 80%);
+    }
+
+    @include md {
+        border-radius: 0;
+        bottom: 0;
+        left: 0;
+        top: inherit;
+        a {
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            div:first-child {
+                padding-right: 5px;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,72 @@
+@import '_breackpoints';
+.footerClass {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #bfbfbf;
+    background: #000;
+    border-top: solid 1px #1c1c1c;
+    padding: 2rem;
+    h1 {
+        font-weight: 300;
+        font-size: 1.3rem;
+    }
+
+    .footerSection {
+
+        display: flex;        
+        flex-direction: column;
+
+        .sectionHeader {
+            width: 15rem;
+            padding-top: 1rem;
+        }
+        .menuSection {
+            display: flex;
+            margin-left: 1rem;
+            padding-bottom: 1rem;
+            div {
+                display: flex;
+                width: 20%;
+                min-width: fit-content;
+                align-items: center;
+                a {
+                    color: #717171;
+                    font-weight: 400;
+                    text-decoration: none;
+                    
+                
+                &:hover{
+                    color: #b33636;
+                }
+                }
+            }
+            @include md{
+                flex-direction: column;
+            }
+        }
+    }
+    .socialSection {
+        padding: 2rem 0 1rem;
+        border-top: solid 1px #1a1a1a;
+        .socialLogoblock{
+            padding-top: 1rem;
+        }
+        a {
+            svg {
+                height: 2rem;
+                color: #717171;
+            }
+            &:hover { 
+                svg {
+                    color: #b33636;
+
+                }   
+            }
+        }
+        @include md{
+            margin-bottom: 1rem;
+        }
+    }
+
+  }

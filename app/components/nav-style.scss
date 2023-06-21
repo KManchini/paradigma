@@ -1,0 +1,114 @@
+@import '_breackpoints';
+$menuBackDark: #101010;
+$menuBackLight: #fff;
+.topNavCont {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $menuBackDark;
+    z-index: 9;
+
+        .topNav {
+            display: flex;
+            position: relative;
+            border-bottom: solid 1px #5a5a5a;
+            width: 90%;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            .almostClass{
+                position: absolute;
+                background: $menuBackDark;
+                bottom: -0.8rem;
+                font-size: 1.1rem;
+                text-decoration: none;
+                color: aliceblue;
+                z-index: 999;
+                width: 18rem;
+                left: calc(50% - 9rem);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 100%;
+                
+        
+                        li {
+                            float: left;
+                            transition: all 0.5s;
+                            a {
+                                display: block;
+                                color: white;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                                position: relative;
+                                font-size: 1.2rem;
+                                transition: all 0.5s;
+                            }
+                        &:hover {
+                            background-color: #242424;
+                            border-radius: 5px;
+                        
+                            a{
+                                color: #ab4949;
+                            }
+                        }
+
+  }}}}}
+
+.onlyDesk {
+display: block;
+    @include md {
+        display: none;
+    }
+}
+.onlyMob {
+    display: none;
+    @include md {
+        display: block;
+    }
+}
+.sectionHeader {
+    padding: 1rem 0;
+}
+.patronsClass {
+    font-weight: 700;
+}
+.mobileList{
+    list-style: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-weight: 300;
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            color: #5a5a5a;
+        }
+    }
+}
+
+

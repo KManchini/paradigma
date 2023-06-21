@@ -1,0 +1,122 @@
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+
+    .meat {
+        border-radius: 2px;
+        width: 100%;
+        position: absolute;
+        height: 3px;
+        background: #FFF;
+        display: block;
+        transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+
+        &:first-child {
+            top: 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:last-child {
+            bottom: 0;
+        }
+    }
+}
+.close {
+    .meat:first-child,
+    .meat:last-child {
+        opacity: 0;
+    }
+
+    .meat:first-child {
+        transform: translateY(20px) scale(0);
+    }
+
+    .meat:last-child {
+        transform: translateY(-20px) scale(0);
+    }
+
+    .meat:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .meat:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0px;
+    height: 100vh;
+    overflow: hidden;
+    transition: max-height .6s ease-in-out;
+
+    width: 100vw;
+    background-color: #00000070;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin: 0;
+
+
+    &.active {
+        max-height: 100vh;
+    }
+}
+
+.menu li {
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+    a:hover {
+        background: #1E86D7;
+    }
+
+    a,
+    span {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    span img {
+        transition: transform .3s ease-in-out;
+    }
+
+    span.toggled {
+        img {
+            transform: rotate(180deg);
+        }
+
+        + .sub-menu {
+            max-height: 500px;
+        }
+    }
+}
+.hamburgerCont {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    padding: 1rem;
+    right: 1rem;
+    top: 1rem;
+    background: #a3a3a3a3;
+    border-radius: 10px;
+    z-index: 100;
+}
+.mobMenuCont {
+    position: fixed;
+    z-index: 99;
+}

@@ -1,0 +1,16 @@
+svg {
+    shape-rendering:geometricPrecision; 
+    text-rendering:geometricPrecision; 
+    image-rendering:optimizeQuality; 
+    fillRule:evenodd; 
+    clip-rule:evenodd;
+}
+
+.fil0 {fill:#271313}
+.fil2 {fill:#271313;fillRule:nonzero}
+
+.leftUp {
+    .fil5 {fill:#ff7100};
+    .fil7 {fill:#ff7100;fillRule:nonzero};
+
+}

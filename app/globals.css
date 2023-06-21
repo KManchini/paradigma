@@ -1,0 +1,23 @@
+html {
+  font-family: var(--font-fira);
+}
+body {
+  margin: 0;
+  background-color: #101010;
+}
+.darkBack {
+  
+  color: azure;
+}
+.testClass {
+  font-family: var(--font-inter);
+}
+
+
+img{
+  width: 100%;
+}
+
+
+
+
